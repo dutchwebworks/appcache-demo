@@ -8,5 +8,5 @@ NETWORK:
 
 
 FALLBACK:
-/ appcache-offline-fallback.html
+/ fallback.html
 themes themes/appcache/gfx/offline.gif

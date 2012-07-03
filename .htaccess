@@ -1,0 +1,103 @@
+########################################
+## Simple URL rewrite pages
+########################################
+
+RewriteRule ^appcache(/)?$ appcache-demo.html [L]
+
+########################################
+## HTML5 proper mime-type for manifest files
+########################################
+
+<IfModule mime_module>
+	AddType text/cache-manifest .appcache .manifest
+</ifModule>
+
+########################################
+## Cache settings for the manifest file
+########################################
+
+<IfModule mod_expires.c>
+	Header set cache-control: public
+	ExpiresActive on
+
+	########################################
+	## Prevent receiving a cached manifest
+	########################################
+
+	ExpiresByType text/cache-manifest "access plus 0 seconds"
+</IfModule>
+
+########################################
+## Check for mod_rewrite module
+########################################
+
+<IfModule mod_rewrite.c> 
+	
+	########################################
+	## Turn mod_rewrite on
+	########################################
+
+	RewriteEngine On
+
+	########################################
+	## Strip out the version number off the request URL
+	## Incoming: header.v2.gif
+	## Outgoing: header.gif
+	########################################	
+	
+	RewriteRule ^(.*\.)v[0-9]+\.(css|js|gif|jpe?g|png|ico|pdf|swf|flv|mov|mpe?g|avi)$ $1$2
+	
+	########################################
+	## Check the orginal URL request and if a version number
+	## is present; if so, add the environmental variable
+	########################################	
+	
+	RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ (.*\.)v[0-9]+\.(css|js|gif|jpe?g|png|ico|pdf|swf|flv|mov|mpe?g|avi)\ HTTP/1.(0|1)
+	RewriteRule ^.*$ - [NC,L,E=request_url_versioned:yes]
+</IfModule>
+
+########################################
+## Check for mod_headers module
+########################################
+
+<IfModule mod_headers.c>
+
+	########################################
+	## Filter incoming reqeusts of these file types and only add the 
+	## expire-header if the evironmental variable is true|yes
+	########################################	
+
+	<FilesMatch "\.(css|js|gif|jpe?g|png|ico|pdf|swf|flv|mov|mpe?g|avi)$">
+		Header set Expires "Thu, 31 Dec 2013 20:00:00 GMT" env=request_url_versioned
+		Header unset ETag env=request_url_versioned
+	</FilesMatch>
+</IfModule>
+
+########################################
+## Remove the eTag from the header
+########################################
+
+<ifModule mod_headers.c>
+  Header unset ETag
+</ifModule>
+
+FileETag None
+
+########################################
+## Check for mod_mime module
+########################################
+
+<IfModule mod_mime.c>
+
+	########################################
+	## Set default UTF-8 encoding
+	########################################	
+
+	AddDefaultCharset utf-8
+	
+	########################################
+	## Force utf-8 for a number of file formats
+	########################################	
+
+	AddCharset utf-8 .html? .css .js .xml .json .rss
+</IfModule>
