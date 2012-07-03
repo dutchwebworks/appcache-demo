@@ -1,10 +1,4 @@
 ########################################
-## Simple URL rewrite pages
-########################################
-
-RewriteRule ^appcache(/)?$ appcache-demo.html [L]
-
-########################################
 ## HTML5 proper mime-type for manifest files
 ########################################
 

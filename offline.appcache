@@ -1,12 +1,12 @@
 CACHE MANIFEST
 
-themes/appcache/css/style.v1.css
-themes/appcache/js/libs/jquery-1.7.2.min.v1.js
-dummy-content/thumb/dag2_moskou.v1.jpg
+/themes/appcache/css/style.v1.css
+/themes/appcache/js/libs/jquery-1.7.2.min.v1.js
+/themes/appcache/gfx/dag2_moskou.v1.jpg
 
 NETWORK:
 
 
 FALLBACK:
-/ fallback.html
-themes themes/appcache/gfx/offline.gif
+/ /fallback.html
+/themes /themes/appcache/gfx/offline.gif
