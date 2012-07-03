@@ -1,0 +1,149 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 28px;
+	background-color: #e5e5cf;
+	margin: 30px 0 50px 0;
+	padding: 0;
+}
+
+body,
+a {
+	color:  #4d4d45;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, sans-serif;
+	line-height: normal;
+	margin-top: 0;
+}
+
+ul {
+	margin: 0 0 20px 20px;
+	padding: 0;
+}
+
+.alignLeft { text-align: left; }
+.alignCenter { text-align: center; }
+.alignRight { text-align: right; }
+
+.floatLeft {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+/* wrapper
+==================================== */
+
+#wrapper {
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* header
+==================================== */
+
+header {
+	border-bottom: 2px dashed #ccc;
+	padding-bottom: 10px;
+	margin-bottom:  40px;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 36px;
+	color: #333;
+	text-shadow: -1px -1px 0 #fff;
+}
+
+/* common for content and aside
+==================================== */
+
+section.content,
+aside,
+.update {	
+	background: #f2f2da;
+	border: 1px solid #bbb;
+	overflow: hidden;
+	padding: 20px;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* section
+==================================== */
+
+section.content {
+	width: 68%;
+	float: left;
+}
+
+.productImg {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* aside
+==================================== */
+
+aside {
+	width: 28%;
+	float: right;
+}
+
+.update {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #dcf2da;
+	border: 1px solid #7f8c7e;
+	margin-bottom: 20px;
+	font-family: monospace;
+	text-align: center;
+}
+
+/* footer
+==================================== */
+
+footer {
+	text-align: center;
+	clear: both;
+	padding-top: 30px;
+	font-size: 12px;
+	color:  #999;
+}
+
+/* gridTwoColumns
+==================================== */
+
+.gridTwoColumns {
+	overflow: hidden;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.gridColLeft,
+.gridColRight {
+	width: 50%;
+	float: left;
+}
+
+.gridColRight {
+	float: right;
+}

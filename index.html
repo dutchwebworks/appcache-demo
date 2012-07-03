@@ -1,0 +1,99 @@
+<!doctype html>
+<html manifest="appcache-demo.appcache">
+<!-- <html> -->
+<head>
+
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link href="themes/appcache/css/style.v1.css" rel="stylesheet">
+<script src="themes/appcache/js/libs/jquery-1.7.2.min.v1.js"></script>
+
+<title>Poort80 - AppCache demo</title>
+
+</head>
+<body>
+
+<div id="wrapper">
+	<header id="mainHeader">
+		<h1>Offline webapp met HTML5 Application Cache</h1>
+	</header>
+	
+	<section class="content">
+		<h2>Webbrowser support</h2>
+
+		<p>
+			Dit is een demo voor HTML5 ApplicationCache.
+		</p>		
+
+		<div class="gridTwoColumns">
+			<div class="gridColLeft">
+				<h3>Wel</h3>	
+				<ul>
+					<li>Firefox 3.5+</li>
+					<li>Chrome 5.0+</li>
+					<li>Safari 4.0+</li>
+					<li>Opera 10.6+</li>
+					<li>iOS Safari 2.1+</li>
+					<li>Android 2.0+</li>
+				</ul>
+			</div>
+
+			<div class="gridColRight">
+				<h3>Niet</h3>
+
+				<ul>
+					<li>Internet Explorer (zelfs niet v10)</li>
+					<li>Mobile Internet Explorer</li>
+				</ul>
+			</div>
+		</div>
+
+		<img src="dummy-content/thumb/dag2_moskou.v1.jpg" class="productImg floatLeft" alt="Baobab">
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>		
+	</section>	
+	
+	<aside>
+		<h3>Andere bronnen</h3>
+		
+		<ul>
+			<li><a href="http://diveintohtml5.info/offline.html">Dive into HTML5 - offline</a></li>
+			<li><a href="http://www.alistapart.com/articles/application-cache-is-a-douchebag/">Jake Archibald, AppCache is a douchebag</a></li>
+			<li><a href="https://developer.mozilla.org/en/Offline_resources_in_Firefox">MSDN - Offline resources in Firefox</a></li>
+			<li><a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/">HTML5 Rocks! - Appcache Beginner</a></li>
+			<li><a href="http://www.sitepoint.com/offline-browsing-in-html5-with-applicationcache/#fbid=h9Evet0IjSf">Sitepoint - Offline browsering with appcache</a></li>
+		</ul>
+	</aside>
+
+	<footer>
+		<p>Als test project gemaakt door Dennis Burger, 2012</p>
+	</footer>
+</div>
+
+<script>
+
+function reloadContent() {
+	window.location.reload();
+}
+
+function onUpdateReady() {
+	$('#mainHeader').after('<div class="update"><p>Er is een update beschikbaar, de pagina refreshed in 2sec ...</p> </div>');
+	setTimeout("reloadContent()", 2*1000);
+}
+window.applicationCache.addEventListener('updateready', onUpdateReady);
+
+if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+	onUpdateReady();
+}
+</script>
+
+</body>
+</html>
