@@ -58,6 +58,62 @@ header h1 {
 	text-shadow: -1px -1px 0 #fff;
 }
 
+/* navigation
+==================================== */
+
+nav {
+	text-align: center;
+	overflow:  hidden;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+nav ul li a {
+	font-weight:  bold;
+	text-decoration: none;
+	text-transform:  uppercase;;
+}
+
+/* common for content and aside
+==================================== */
+
+.productList {
+	overflow: hidden;
+	padding-bottom: 20px;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.productList .productItem {
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+	height: 200px;
+	overflow:  hidden;
+	background: #fff;
+	padding: 10px;
+	text-align: center;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+
+}
+
+.productList img {
+	width: 150px;
+	
+}
+
 /* common for content and aside
 ==================================== */
 

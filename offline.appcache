@@ -1,12 +1,30 @@
 CACHE MANIFEST
 
+CACHE:
+
+# HTML pages
+/products.html
+/about.html
+
+# Stylesheets
 /themes/appcache/css/style.v1.css
+
+# Javascripts
 /themes/appcache/js/libs/jquery-1.7.2.min.v1.js
+/themes/appcache/js/common.v1.js
+
+# Images
 /themes/appcache/gfx/dag2_moskou.v1.jpg
+/themes/appcache/gfx/schoen.v1.jpg
+/themes/appcache/gfx/banaan.v1.jpg
+/themes/appcache/gfx/milkshake.v1.jpg
+/themes/appcache/gfx/auto.v1.jpg
+http://maps.googleapis.com/maps/api/staticmap?center=Val+Cenis,+france&zoom=12&size=275x206&maptype=roadmap&markers=label:A|Val+Cenis,+france&sensor=false
 
 NETWORK:
-
+*
 
 FALLBACK:
+
 / /fallback.html
 /themes /themes/appcache/gfx/offline.gif

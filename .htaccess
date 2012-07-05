@@ -1,4 +1,11 @@
 ########################################
+## Simple rewrite URL's
+########################################
+
+RewriteRule ^producten(/)?$ products.html [L]
+RewriteRule ^about(/)?$ about.html [L]
+
+########################################
 ## HTML5 proper mime-type for manifest files
 ########################################
 
