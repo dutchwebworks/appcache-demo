@@ -3,7 +3,7 @@
 ########################################
 
 RewriteRule ^products(/)?$ products.html [L]
-RewriteRule ^products/detail(/)?$ products-detail.html [L]
+RewriteRule ^product/detail(/)?$ products-detail.html [L]
 RewriteRule ^about(/)?$ about.html [L]
 
 ########################################
