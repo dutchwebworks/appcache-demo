@@ -2,7 +2,7 @@
 ## Simple rewrite URL's
 ########################################
 
-RewriteRule ^producten(/)?$ products.html [L]
+RewriteRule ^products(/)?$ products.html [L]
 RewriteRule ^about(/)?$ about.html [L]
 
 ########################################

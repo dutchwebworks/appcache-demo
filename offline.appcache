@@ -3,8 +3,9 @@ CACHE MANIFEST
 CACHE:
 
 # HTML pages
-/products.html
-/about.html
+/
+/products
+/about
 
 # Stylesheets
 /themes/appcache/css/style.v1.css
