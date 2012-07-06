@@ -37,8 +37,6 @@ ul {
 ==================================== */
 
 #wrapper {
-	width: 70%;
-	margin: 0 auto;
 	padding: 20px;
 }
 
@@ -98,6 +96,7 @@ nav ul li a {
 	background: #fff;
 	padding: 10px;
 	text-align: center;
+	margin-bottom: 20px;
 
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -106,42 +105,14 @@ nav ul li a {
 
 .productList img {
 	width: 150px;
-
 }
 
-/* common for content and aside
-==================================== */
-
-section.content,
-aside,
-.update {	
-	background: #f2f2da;
-	border: 1px solid #bbb;
-	overflow: hidden;
-	padding: 20px;
-
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-
-	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+.detailImg {
+	max-width: 100%;
 }
 
 /* section
 ==================================== */
-
-@media screen and (min-width: 520px) {
-	section.content {
-		width: 68%;
-		float: left;
-	}
-}
 
 .productImg {
 	-moz-border-radius: 5px;
@@ -155,13 +126,6 @@ aside,
 
 /* aside
 ==================================== */
-
-@media screen and (min-width: 520px) {
-	aside {
-		width: 28%;
-		float: right;
-	}
-}
 
 .update {
 	padding: 10px;
@@ -201,4 +165,65 @@ footer {
 
 .gridColRight {
 	float: right;
+}
+
+/* Layout breakpoints
+==================================== */
+
+@media screen and (max-width: 520px) {
+	header h1 {
+		font-size: 18px;
+	}
+}
+
+/* Layout breakpoints
+==================================== */
+
+@media screen and (min-width: 520px) {
+
+	/* wrapper
+	==================================== */
+
+	#wrapper {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	section.content {
+		width: 68%;
+		float: left;
+	}
+
+	aside {
+		width: 28%;
+		float: right;
+	}
+
+	header h1 {
+		font-size: 36px;
+	}
+
+	/* content
+	==================================== */
+
+	section.content,
+	aside,
+	.update {	
+		background: #f2f2da;
+		border: 1px solid #bbb;
+		overflow: hidden;
+		padding: 20px;
+
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+
+		-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+		-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+		box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+	}
 }
