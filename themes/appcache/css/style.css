@@ -136,9 +136,11 @@ aside,
 /* section
 ==================================== */
 
-section.content {
-	width: 68%;
-	float: left;
+@media screen and (min-width: 520px) {
+	section.content {
+		width: 68%;
+		float: left;
+	}
 }
 
 .productImg {
@@ -154,9 +156,11 @@ section.content {
 /* aside
 ==================================== */
 
-aside {
-	width: 28%;
-	float: right;
+@media screen and (min-width: 520px) {
+	aside {
+		width: 28%;
+		float: right;
+	}
 }
 
 .update {
