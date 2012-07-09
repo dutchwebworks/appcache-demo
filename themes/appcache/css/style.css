@@ -33,6 +33,10 @@ ul {
 	margin-bottom: 20px;
 }
 
+.hide {
+	display: none;
+}
+
 /* wrapper
 ==================================== */
 
@@ -165,6 +169,34 @@ footer {
 
 .gridColRight {
 	float: right;
+}
+
+/* statusMessage, offline or online
+==================================== */
+
+.statusMessage {
+	padding: 5px 10px;
+	color: #fff;
+	background: #ccc;
+	position:  fixed;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	font-size: 12px;
+
+	-moz-border-radius: 0 0 5px 0;
+	-webkit-border-radius: 0 0 5px 0;
+	border-radius: 0 0 5px 0;
+
+	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+#statusOnline {
+	background: green;
+}
+
+#statusOffline {
+	background: red;
 }
 
 /* Layout breakpoints

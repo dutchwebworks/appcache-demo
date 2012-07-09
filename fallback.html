@@ -1,16 +1,44 @@
 <!doctype html>
-<html manifest="offline.appcache">
+<html manifest="/offline.appcache">
+<!-- <html> -->
 <head>
 
 <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
-<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-<title>Offline</title>
+<link href="/themes/appcache/css/style.v2.css" rel="stylesheet">
+<script src="/themes/appcache/js/libs/jquery-1.7.2.min.v2.js"></script>
+<script src="/themes/appcache/js/common.v2.js"></script>
+
+<title>AppCache demo - home</title>
 
 </head>
 <body>
 
-<h1>You're offline</h1>
+<div id="wrapper">
+	<header id="mainHeader">
+		<h1>Offline webapp met HTML5 Application Cache</h1>
+	</header>
+
+	<nav role="navigation">
+		<ul>
+			<li><a href="/">&gt; Home</a></li>
+			<li><a href="/products">&gt; Products</a></li>
+			<li><a href="/about">&gt; About</a></li>
+		</ul>
+	</nav>
+
+	<section class="content">
+		<h2>You're offline</h2>
+	</section>	
+	
+	<footer>
+		<p>Als test project gemaakt door Dennis Burger, 2012</p>
+	</footer>
+</div>
+
+<span id="statusOnline" class="hide statusMessage">Online</span>
+<span id="statusOffline" class="hide statusMessage">Offline</span>
 
 </body>
 </html>

@@ -13,3 +13,27 @@ window.applicationCache.addEventListener('updateready', onUpdateReady);
 if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
 	onUpdateReady();
 }
+
+/* check if browser is offline, show message
+======================================== */
+
+function showOnlineMessage() {
+	$('#statusOffline').addClass('hide');
+	$('#statusOnline').removeClass('hide');
+}
+
+function showOfflineMessage() {
+	$('#statusOnline').addClass('hide');
+	$('#statusOffline').removeClass('hide');
+}
+
+$(document).ready(function(){
+	if(navigator.onLine) {
+		showOnlineMessage();
+	} else {
+		showOfflineMessage();
+	}	
+});
+
+window.addEventListener("online", showOnlineMessage);
+window.addEventListener("offline", showOfflineMessage);
